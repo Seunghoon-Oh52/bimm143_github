@@ -114,7 +114,7 @@ A useful function here is the “base R” `sample()` function:
 sample(1:5, size = 4, replace=TRUE)
 ```
 
-    [1] 2 4 1 5
+    [1] 4 1 1 4
 
 We can use this to make a random nucleotide sequence if we draw from
 “A”, “C”, “G” and “T”…
@@ -123,10 +123,10 @@ We can use this to make a random nucleotide sequence if we draw from
 sample(x=c("A","C","G","T"), size=60, replace=TRUE)
 ```
 
-     [1] "T" "C" "C" "T" "A" "A" "G" "G" "G" "A" "C" "A" "G" "T" "C" "A" "T" "C" "T"
-    [20] "C" "A" "C" "T" "A" "A" "C" "G" "A" "C" "A" "G" "C" "G" "C" "G" "C" "T" "C"
-    [39] "T" "C" "C" "T" "A" "C" "A" "C" "C" "G" "C" "A" "A" "T" "C" "C" "T" "T" "A"
-    [58] "G" "C" "G"
+     [1] "G" "A" "C" "G" "C" "A" "C" "T" "C" "T" "A" "C" "T" "T" "C" "C" "C" "G" "G"
+    [20] "A" "A" "T" "A" "T" "T" "C" "T" "G" "C" "A" "C" "G" "C" "G" "G" "C" "T" "A"
+    [39] "T" "A" "G" "G" "T" "G" "G" "G" "T" "T" "G" "T" "A" "G" "T" "G" "A" "G" "T"
+    [58] "G" "G" "G"
 
 > Q2a: Write a function `generate_dna()` that returns a random DNA
 > sequence of a length specified by the user. Your first version should
@@ -144,10 +144,10 @@ generate_dna_2a <- function(length_dna){
 generate_dna_2a(60)
 ```
 
-     [1] "C" "T" "A" "T" "C" "G" "A" "T" "G" "C" "T" "A" "T" "A" "G" "A" "C" "T" "T"
-    [20] "C" "G" "T" "G" "G" "T" "A" "T" "A" "A" "T" "C" "C" "C" "C" "T" "T" "A" "C"
-    [39] "T" "G" "G" "T" "C" "G" "G" "C" "A" "T" "A" "T" "A" "C" "C" "T" "A" "T" "T"
-    [58] "T" "A" "G"
+     [1] "G" "G" "A" "G" "C" "C" "C" "G" "A" "T" "T" "C" "T" "A" "C" "A" "A" "C" "G"
+    [20] "T" "T" "T" "T" "C" "T" "A" "A" "A" "T" "A" "G" "A" "A" "C" "G" "A" "C" "C"
+    [39] "C" "G" "T" "C" "A" "T" "A" "A" "C" "A" "C" "G" "C" "A" "A" "C" "G" "T" "C"
+    [58] "A" "T" "T"
 
 > Q2b: Your second version should optionally be able to return either a
 > multi-element vector of single character nucleotides (as before) or a
@@ -174,16 +174,16 @@ generate_dna_2b <- function(length_dna, single_string=FALSE){
 generate_dna_2b(60)
 ```
 
-     [1] "G" "G" "G" "G" "G" "C" "A" "C" "A" "C" "C" "G" "G" "T" "G" "T" "A" "A" "C"
-    [20] "C" "G" "C" "A" "T" "C" "T" "G" "C" "A" "G" "T" "C" "C" "A" "T" "C" "G" "G"
-    [39] "G" "C" "A" "T" "T" "C" "T" "C" "T" "A" "A" "A" "A" "A" "T" "A" "G" "T" "C"
-    [58] "C" "T" "T"
+     [1] "C" "C" "G" "G" "G" "T" "G" "C" "A" "G" "G" "T" "C" "C" "A" "A" "C" "G" "C"
+    [20] "T" "T" "C" "T" "G" "C" "T" "G" "T" "G" "T" "C" "G" "A" "T" "A" "A" "C" "T"
+    [39] "T" "G" "C" "C" "G" "G" "G" "C" "A" "A" "T" "T" "A" "G" "C" "A" "G" "T" "G"
+    [58] "G" "A" "G"
 
 ``` r
 generate_dna_2b(60, single_string=TRUE)
 ```
 
-    [1] "AGCGTATTTTTTAGTGCCTTTCCAGCCCGGTACGCACCGTCACCCCCTACGCGACAACTT"
+    [1] "CAAATAATCATCTCGCGTCCGACAACGCTTCATGGCGACGTATTGAGTTCACAACTGAGT"
 
 > Q2c: Finally, create a final version of your function that prints out
 > a FASTA format sequence with an id line indicating the sequence
@@ -213,7 +213,7 @@ generate_dna_2c(9, single_string = TRUE)
 ```
 
     >len9
-    AAAAATGGG
+    TCGATGACA
 
 ## A generate_protein() function
 
@@ -239,7 +239,7 @@ generate_protein <- function(length_protein){
 generate_protein(6)
 ```
 
-    [1] "LVNKHI"
+    [1] "NHGDFC"
 
 ## Generate random protein sequences of length 6 to 13
 
@@ -262,21 +262,21 @@ for(n in 6:13) {
 ```
 
     >id.6
-    WGCEHT
+    ERNGDS
     >id.7
-    CTPALNM
+    QGMVLAP
     >id.8
-    GVSQFRVT
+    YTITLWRI
     >id.9
-    PQRSWWVYD
+    HHPFKMTYF
     >id.10
-    FFAMFNHHLL
+    DPHCSEVWMA
     >id.11
-    RNYFPCNSCAR
+    YMCADQRRQID
     >id.12
-    KQNMGDFVWCNS
+    IRVFSRQVGLIN
     >id.13
-    AFSYVIKWGKFGY
+    YAQDRFDWYPVGL
 
 ## Q5: BLASTp search against nr — are your peptides “unique in nature”?
 
