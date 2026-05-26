@@ -23,4 +23,4 @@ Class 12: [Genome informatics and high throughput sequencing](class12/class12.md
 
 Class 13: [RNA-seq analysis](class13/class13.md)
 
-Class 14: [RNA-seq mini-project](class14/class14.md)]
+Class 14: [RNA-seq mini-project](class14/class14.md)
