@@ -11,7 +11,7 @@ Class 6: [R functions](class06/class06.md)
 
 Class 7: [Machine Learning for Bioinformatics](class07/class07.md)
 
-Class 8: [Unsupervised learning mini-project](class08/class08.md)]
+Class 8: [Unsupervised learning mini-project](class08/class08.md)
 
 Class 9: [Candy mini-project](class09/class09.md)
 
